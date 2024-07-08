@@ -1,7 +1,8 @@
-
 declare global {
   interface Window {
     // electron: ElectronAPI
-    context: {}
+    context: {
+      locate: string
+    }
   }
 }
