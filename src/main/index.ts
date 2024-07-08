@@ -10,7 +10,27 @@ function createWindow(): void {
     height: 670,
     show: false,
     autoHideMenuBar: true,
-    ...(process.platform === 'linux' ? { icon } : {}),
+    ...(process.platform === 'linux'
+      ? {
+          icon,
+          trafficLightPosition: {
+            x: 15,
+            y: 10
+          }
+        }
+      : {}),
+    center: true,
+    title: 'NoteDown',
+    frame: false,
+    vibrancy: 'under-window',
+    visualEffectState: 'active',
+    titleBarStyle: 'hidden',
+    titleBarOverlay: {
+      color: '#000',
+      symbolColor: '#fff'
+    },
+    backgroundMaterial: 'acrylic',
+    movable: true,
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: true,
