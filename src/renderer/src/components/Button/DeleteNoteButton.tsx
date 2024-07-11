@@ -7,8 +7,8 @@ export const DeleteNoteButton = ({ ...props }: ActionButtonProps) => {
 
   const createDeleteNote = useSetAtom(deleteNoteAtom)
 
-  const handleDeletion = () => {
-    createDeleteNote()
+  const handleDeletion = async () => {
+    await createDeleteNote()
   }
   return (
     <ActionButton onClick={handleDeletion} {...props}>
