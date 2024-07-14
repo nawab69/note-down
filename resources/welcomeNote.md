@@ -51,4 +51,6 @@ Code block snippets using the following syntax _\`\`\`js\`\`\`_ are **_not suppo
 
 ### Links
 
-Links are **_not supported_** yet!
+Links are now supporting
+
+[Google](https://google.com)
